@@ -41,7 +41,7 @@ unique_years = np.unique(disc_years)
 # The data contains some of the same planets multiple times, so unique counts are performed
 planets_discovered = [np.unique(planet_names[disc_years == year]).size for year in unique_years]
 
-# Prepend (0, 0) to the data to force the trendline to start at the origin
+# Trying to Add (0, 0) to the data to force a trendline to start at the origin
 # unique_years = [0] + unique_years.tolist()
 # planets_discovered = [0] + planets_discovered
 
