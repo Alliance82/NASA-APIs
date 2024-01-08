@@ -15,10 +15,23 @@ burl = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query="
 format = "&format=json"
 # List of fields to build url for the API Query
 return_columns = [
-    'pl_name',
-    'hostname',
-    'gaia_id',
-    'disc_year'
+    'pl_name', # Planetary Name
+    'hostname', # Host Name
+    'gaia_id', # GAIA ID
+    'disc_year', # Discover Year
+    
+    # The below columns are being pulled to calculate planetary orbits
+    'pl_orbper', # Planetary Orbital Period
+    'pl_orbsmax', # Semi-Major Axis
+    'pl_orbeccen', # Eccentricity
+    'pl_orbincl', # Inclination
+    'pl_orblper', # Longitude of Ascending Node
+    'pl_orblperstr', # Argument of Periastron
+    'pl_tranmid', # Time of Periastron Passage
+    'st_mass', # Mass of the Host Star
+    'rv_flag', # Radial Velocity Data
+    'ttv_flag', # Transit Timing Variations (TTVs)
+    'pl_ratdor' # Impact Parameter
 ]
 table = "ps"
 #query_filters="+where+pl_name+like+%27%25Her%25%27+order+by+pl_orbper+desc"
